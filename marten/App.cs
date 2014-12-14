@@ -9,6 +9,10 @@ namespace marten
     static class App
     {
         /// <summary>
+        /// This string used in dockPanel layout xml file.
+        /// </summary>
+        internal const string PersistentStringSeparator = "::__::marten::__::";
+        /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
