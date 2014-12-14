@@ -1,0 +1,1341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeifenLuo.WinFormsUI.Docking</name>
+    </assembly>
+    <members>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanel.DockBackColor">
+            <summary>
+            Determines the color with which the client rectangle will be drawn.
+            If this property is used instead of the BackColor it will not have any influence on the borders to the surrounding controls (DockPane).
+            The BackColor property changes the borders of surrounding controls (DockPane).
+            Alternatively both properties may be used (BackColor to draw and define the color of the borders and DockBackColor to define the color of the client rectangle). 
+            For Backgroundimages: Set your prefered Image, then set the DockBackColor and the BackColor to the same Color (Control)
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPanel.DragHandlerBase">
+            <summary>
+            DragHandlerBase is the base class for drag handlers. The derived class should:
+              1. Define its public method BeginDrag. From within this public BeginDrag method,
+                 DragHandlerBase.BeginDrag should be called to initialize the mouse capture
+                 and message filtering.
+              2. Override the OnDragging and OnEndDrag methods.
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.DockContent.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Overridden to avoid resize issues with nested controls
+            </summary>
+            <remarks>
+            http://blogs.msdn.com/b/alejacma/archive/2008/11/20/controls-won-t-get-resized-once-the-nesting-hierarchy-of-windows-exceeds-a-certain-depth-x64.aspx
+            http://support.microsoft.com/kb/953934
+            </remarks>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnClick(System.EventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnMouseEnter(System.EventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnMouseLeave(System.EventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.InertButton.OnEnabledChanged(System.EventArgs)">
+            <exclude/>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPanelSkin">
+            <summary>
+            The skin to use when displaying the DockPanel.
+            The skin allows custom gradient color schemes to be used when drawing the
+            DockStrips and Tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanelSkin.AutoHideStripSkin">
+            <summary>
+            The skin used to display the auto hide strips and tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanelSkin.DockPaneStripSkin">
+            <summary>
+            The skin used to display the Document and ToolWindow style DockStrips and Tabs.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin">
+            <summary>
+            The skin used to display the auto hide strip and tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin.DockStripGradient">
+            <summary>
+            The gradient color skin for the DockStrips.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin.TabGradient">
+            <summary>
+            The gradient color skin for the Tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin.TextFont">
+            <summary>
+            Font used in AutoHideStrip elements.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPaneStripSkin">
+            <summary>
+            The skin used to display the document and tool strips and tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripSkin.DocumentGradient">
+            <summary>
+            The skin used to display the Document style DockPane strip and tab.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripSkin.ToolWindowGradient">
+            <summary>
+            The skin used to display the ToolWindow style DockPane strip and tab.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripSkin.TextFont">
+            <summary>
+            Font used in DockPaneStrip elements.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPaneStripToolWindowGradient">
+            <summary>
+            The skin used to display the DockPane ToolWindow strip and tab.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPaneStripGradient">
+            <summary>
+            The skin used to display the DockPane strip and tab.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripGradient.DockStripGradient">
+            <summary>
+            The gradient color skin for the DockStrip.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripGradient.ActiveTabGradient">
+            <summary>
+            The skin used to display the active DockPane tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripGradient.InactiveTabGradient">
+            <summary>
+            The skin used to display the inactive DockPane tabs.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripToolWindowGradient.ActiveCaptionGradient">
+            <summary>
+            The skin used to display the active ToolWindow caption.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPaneStripToolWindowGradient.InactiveCaptionGradient">
+            <summary>
+            The skin used to display the inactive ToolWindow caption.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.TabGradient">
+            <summary>
+            The skin used to display the dock pane tab
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockPanelGradient">
+            <summary>
+            The gradient color skin.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanelGradient.StartColor">
+            <summary>
+            The beginning gradient color.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanelGradient.EndColor">
+            <summary>
+            The ending gradient color.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockPanelGradient.LinearGradientMode">
+            <summary>
+            The gradient mode to display the colors.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.TabGradient.TextColor">
+            <summary>
+            The text color.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.ITheme">
+            <summary>
+            DockPanel Suite theme interface.
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.ITheme.Apply(WeifenLuo.WinFormsUI.Docking.DockPanel)">
+            <summary>
+            Applies the specified theme to the dock panel.
+            </summary>
+            <param name="dockPanel">The dock panel.</param>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.ActiveTab_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.ActiveTabHover_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_Bottom">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_Fill">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.Dockindicator_PaneDiamond_Fill_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_HotSpot">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.Dockindicator_PaneDiamond_Hotspot_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_HotSpotIndex">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_HotspotIndex_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_Left">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_Right">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PaneDiamond_Top">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.Dockindicator_PaneDiamond_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelBottom">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelBottom_Active">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelBottom_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelFill">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelFill_Active">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelFill_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelLeft">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelLeft_Active">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelLeft_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelRight">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelRight_Active">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelRight_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelTop">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelTop_Active">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockIndicator_PanelTop_VS2012">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockPane_AutoHide">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockPane_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockPane_Dock">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockPane_Option">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.DockPane_OptionOverflow">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.InactiveTabHover_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.LostFocusTab_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Resources.LostFocusTabHover_Close">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneCaption_AutoHideNo">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneCaption_AutoHideYes">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneCaption_CloseDisabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneCaption_CloseEnabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_CloseDisabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_CloseEnabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_ScrollLeftDisabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_ScrollLeftEnabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_ScrollRightDisabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.ResourcesVS2003.DockPaneStrip_ScrollRightEnabled">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.StringsVS2003">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.DockPaneCaption_ToolTipAutoHide">
+            <summary>
+              Ищет локализованную строку, похожую на Auto Hide.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.DockPaneCaption_ToolTipClose">
+            <summary>
+              Ищет локализованную строку, похожую на Close.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.DockPaneStrip_ToolTipClose">
+            <summary>
+              Ищет локализованную строку, похожую на Close.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.DockPaneStrip_ToolTipScrollLeft">
+            <summary>
+              Ищет локализованную строку, похожую на Scroll Left.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.StringsVS2003.DockPaneStrip_ToolTipScrollRight">
+            <summary>
+              Ищет локализованную строку, похожую на Scroll Right.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/ClassDef/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.HitTest(System.Drawing.Point)">
+            <exclude />
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.MeasureHeight">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.OnRefreshChanges">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.OnBeginDrawTab(WeifenLuo.WinFormsUI.Docking.AutoHideStripBase.Tab)">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Method[@name=&quot;OnBeginDrawTab(AutoHideTab)&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.OnEndDrawTab(WeifenLuo.WinFormsUI.Docking.AutoHideStripBase.Tab)">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Method[@name=&quot;OnEndDrawTab(AutoHideTab)&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.StringFormatTabHorizontal">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;StringFormatTabHorizontal&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.StringFormatTabVertical">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;StringFormatTabVertical&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageHeight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageHeight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageWidth">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageWidth&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.ImageGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;ImageGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.TextGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;TextGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.TextGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;TextGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.TabGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;TabGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.TabGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;TabGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.TabGapBetween">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;TabGapBetween&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.BrushTabBackground">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;BrushTabBackground&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.PenTabBorder">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;PenTabBorder&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003AutoHideStrip.BrushTabText">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/AutoHideStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;AutoHideStripVS2003&quot;]/Property[@name=&quot;BrushTabText&quot;]/*"/>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/ClassDef/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.#ctor(WeifenLuo.WinFormsUI.Docking.DockPane)">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Construct[@name=&quot;(DockPane)&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.MeasureHeight">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.OnRefreshChanges">
+            <exclude/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.TextGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;TextGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.TextGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;TextGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.TextGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;TextGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.TextGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;TextGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ButtonGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ButtonGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ButtonGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ButtonGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ButtonGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ButtonGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ButtonGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ButtonGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ButtonGapBetween">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ButtonGapBetween&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ImageCloseEnabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ImageCloseEnabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ImageCloseDisabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ImageCloseDisabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ImageAutoHideYes">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ImageAutoHideYes&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ImageAutoHideNo">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ImageAutoHideNo&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ToolTipClose">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ToolTipClose&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ToolTipAutoHide">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ToolTipAutoHide&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ActiveBackColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ActiveBackColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.InactiveBackColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;InactiveBackColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ActiveTextColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ActiveTextColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.InactiveTextColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;InactiveTextColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.InactiveBorderColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;InactiveBorderColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.ActiveButtonBorderColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;ActiveButtonBorderColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.InactiveButtonBorderColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;InactiveButtonBorderColor&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneCaption.TextFormat">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneCaptionVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneCaptionVS2003&quot;]/Property[@name=&quot;TextStringFormat&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.HitTest(System.Drawing.Point)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnBeginDrawTabStrip">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Method[@name=&quot;OnBeginDrawTabStrip()&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnEndDrawTabStrip">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Method[@name=&quot;OnEndDrawTabStrip()&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnBeginDrawTab(WeifenLuo.WinFormsUI.Docking.DockPaneStripBase.Tab)">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Method[@name=&quot;OnBeginDrawTab(DockPaneTab)&quot;]/*"/>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OnEndDrawTab(WeifenLuo.WinFormsUI.Docking.DockPaneStripBase.Tab)">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Method[@name=&quot;OnEndDrawTab(DockPaneTab)&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.Components">
+            <exclude/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowStripGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowStripGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowStripGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowStripGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageHeight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageHeight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageWidth">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageWidth&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowImageGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowImageGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowTextGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowTextGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowTabSeperatorGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowSeperatorGaptop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowTabSeperatorGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowSeperatorGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageCloseEnabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageCloseEnabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageCloseDisabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageCloseDisabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageScrollLeftEnabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageScrollLeftEnabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageScrollLeftDisabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageScrollLeftDisabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageScrollRightEnabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageScrollRightEnabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ImageScrollRightDisabled">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ImageScrollRightDisabled&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolTipClose">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolTipClose&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolTipScrollLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolTipScrollLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolTipScrollRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolTipScrollRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ToolWindowTextFormat">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ToolWindowTextStringFormat&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentTextFormat">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentTextStringFormat&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentTabMaxWidth">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentTabMaxWidth&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentButtonGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentButtonGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentButtonGapBottom">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentButtonGapBottom&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentButtonGapBetween">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentButtonGapBetween&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentButtonGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentButtonGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentTabGapTop">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentTabGapTop&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentTabGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentTabGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentTabGapRight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentTabGapRight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentIconGapLeft">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentIconGapLeft&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentIconWidth">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentIconWidth&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.DocumentIconHeight">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;DocumentIconHeight&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OutlineInnerPen">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;OutlineInnerPen&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.OutlineOuterPen">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;OutlineOuterPen&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ActiveBackBrush">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ActiveBackBrush&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.ActiveTextColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;ActiveTextBrush&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.TabSeperatorPen">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;TabSeperatorPen&quot;]/*"/>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2003DockPaneStrip.InactiveTextColor">
+            <!-- Сбой при вставке некоторых или всех включенных XML --><include file="CodeDoc/DockPaneStripVS2003.xml" path="//CodeDoc/Class[@name=&quot;DockPaneStripVS2003&quot;]/Property[@name=&quot;InactiveTextBrush&quot;]/*"/>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2003Theme">
+            <summary>
+            Visual Studio 2003 theme.
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2003Theme.Apply(WeifenLuo.WinFormsUI.Docking.DockPanel)">
+            <summary>
+            Applies the specified theme to the dock panel.
+            </summary>
+            <param name="dockPanel">The dock panel.</param>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.DockContentHandler.CloseButtonVisible">
+            <summary>
+            Determines whether the close button is visible on the content
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.NestedPaneCollection.SwitchPaneWithFirstChild(WeifenLuo.WinFormsUI.Docking.DockPane)">
+            <summary>
+            Switches a pane with its first child in the pane hierarchy. (The actual hiding happens elsewhere.)
+            </summary>
+            <param name="pane">Pane to switch</param>
+        </member>
+        <member name="F:WeifenLuo.WinFormsUI.Docking.DockPane._lastParentWindow">
+            <summary>
+            There's a bug in the WinForms layout engine
+            that can result in a deferred layout to not
+            properly clear out the cached layout args after
+            the layout operation is performed.
+            Specifically, this bug is hit when the bounds of
+            the Pane change, initiating a layout on the parent
+            (DockWindow) which is where the bug hits.
+            To work around it, when a pane loses the DockWindow
+            as its parent, that parent DockWindow needs to
+            perform a layout to flush the cached args, if they exist.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2005DockPaneCaption.CloseButtonVisible">
+            <summary>
+            Determines whether the close button is visible on the content
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2005DockPaneStrip.CalculateTabs_Document">
+            <summary>
+            Calculate which tabs are displayed and in what order.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DockWindow">
+            <summary>
+            Dock window base class.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DefaultDockWindow">
+            <summary>
+            Dock window of Visual Studio 2003/2005 theme.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.DocumentTabStripLocation">
+            <summary>
+            The location to draw the DockPaneStrip for Document style windows.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2005Theme">
+            <summary>
+            Visual Studio 2005 theme (default theme).
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2005Theme.Apply(WeifenLuo.WinFormsUI.Docking.DockPanel)">
+            <summary>
+            Applies the specified theme to the dock panel.
+            </summary>
+            <param name="dockPanel">The dock panel.</param>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.VS2012LightDockPaneCaption.CloseButtonVisible">
+            <summary>
+            Determines whether the close button is visible on the content
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2012LightDockPaneStrip.CalculateTabs_Document">
+            <summary>
+            Calculate which tabs are displayed and in what order.
+            </summary>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2012LightDockWindow">
+            <summary>
+            Dock window of Visual Studio 2012 Light theme.
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2012LightDockWindow.#ctor(WeifenLuo.WinFormsUI.Docking.DockPanel,WeifenLuo.WinFormsUI.Docking.DockState)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WeifenLuo.WinFormsUI.Docking.VS2012LightDockWindow"/> class.
+            </summary>
+            <param name="dockPanel">The dock panel.</param>
+            <param name="dockState">State of the dock.</param>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.VS2012LightTheme">
+            <summary>
+            Visual Studio 2012 Light theme.
+            </summary>
+        </member>
+        <member name="M:WeifenLuo.WinFormsUI.Docking.VS2012LightTheme.Apply(WeifenLuo.WinFormsUI.Docking.DockPanel)">
+            <summary>
+            Applies the specified theme to the dock panel.
+            </summary>
+            <param name="dockPanel">The dock panel.</param>
+        </member>
+        <member name="T:WeifenLuo.WinFormsUI.Docking.Strings">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.Category_Docking">
+            <summary>
+              Ищет локализованную строку, похожую на Docking.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.Category_DockingNotification">
+            <summary>
+              Ищет локализованную строку, похожую на Docking Notification.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.Category_Performance">
+            <summary>
+              Ищет локализованную строку, похожую на Performance.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.Category_PropertyChanged">
+            <summary>
+              Ищет локализованную строку, похожую на Property Changed.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockAreaEditor_FloatCheckBoxText">
+            <summary>
+              Ищет локализованную строку, похожую на (Float).
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_AllowEndUserDocking_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Determines if end user drag and drop docking is allowed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_AutoHidePortion_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The size to display the content in auto hide mode. Value &lt; 1 to specify the size in portion; value &gt;= 1 to specify the size in pixel..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_CloseButton_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Enable/Disable the close button of the content..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_CloseButtonVisible_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Shows or hides the close button of the content. This property does not function with System MDI Document Style..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_Constructor_InvalidForm">
+            <summary>
+              Ищет локализованную строку, похожую на The form must be of type IDockContent..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_DockAreas_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Gets or sets a value indicating in which area of the DockPanel the content allowed to show..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_DockStateChanged_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when the value of DockState property changed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_HideOnClose_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Indicates the content will be hidden instead of being closed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_ShowHint_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The desired docking state when first showing..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_TabPageContextMenu_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Context menu displayed for the dock pane tab strip..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_TabText_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The tab text displayed in the dock pane. If not set, the Text property will be used..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContent_ToolTipText_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The text displayed when mouse hovers over the tab..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_AutoHidePortion_OutOfRange">
+            <summary>
+              Ищет локализованную строку, похожую на The provided value is out of range..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_DockAreas_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Value: The value of DockAreas conflicts with current DockState..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_DockPane_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на The pane is invalid. Check the IsFloat and DockPanel properties of this dock pane..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_FloatPane_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на The pane is invalid. Check the IsFloat and DockPanel properties of this dock pane..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_IsFloat_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid value, conflicts with DockableAreas  property..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_SetDockState_InvalidState">
+            <summary>
+              Ищет локализованную строку, похожую на The dock state is invalid..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_SetDockState_NullPanel">
+            <summary>
+              Ищет локализованную строку, похожую на The dock panel is null..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_Show_InvalidBeforeContent">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid beforeContent, it must be contained by the pane..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_Show_InvalidDockState">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid DockState: Content can not be showed as &quot;Unknown&quot; or &quot;Hidden&quot;..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_Show_InvalidPrevPane">
+            <summary>
+              Ищет локализованную строку, похожую на The previous pane is invalid. It can not be null, and its docking state must not be auto-hide..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_Show_NullDockPanel">
+            <summary>
+              Ищет локализованную строку, похожую на DockPanel can not be null..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_Show_NullPane">
+            <summary>
+              Ищет локализованную строку, похожую на The Pane can not be null..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockContentHandler_ShowHint_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid value, check DockableAreas property..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockHandler_TabPageContextMenuStrip_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Context menu displayed for the dock pane tab strip..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockIndicator_ToolTipText">
+            <summary>
+              Ищет локализованную строку, похожую на Press SHIFT for docking to full side..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_ActiveContent_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Content: ActiveContent must be one of the visible contents, or null if there is no visible content..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_Constructor_NullContent">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid argument: Content can not be &quot;null&quot;..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_Constructor_NullDockPanel">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid argument: The content&apos;s DockPanel can not be &quot;null&quot;..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_DockTo_InvalidContainer">
+            <summary>
+              Ищет локализованную строку, похожую на The specified container conflicts with the IsFloat property..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_DockTo_NoPrevPane">
+            <summary>
+              Ищет локализованную строку, похожую на The previous pane does not exist in the nested docking pane collection..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_DockTo_NullContainer">
+            <summary>
+              Ищет локализованную строку, похожую на The container can not be null..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_DockTo_NullPrevPane">
+            <summary>
+              Ищет локализованную строку, похожую на The previous pane can not be null when the nested docking pane collection is not empty..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_DockTo_SelfPrevPane">
+            <summary>
+              Ищет локализованную строку, похожую на The previous pane can not be itself..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_FloatWindow_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на FloatWindow property can not be set to &quot;null&quot; when DockState is DockState.Float..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_SetContentIndex_InvalidContent">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Content: Content not within the collection..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_SetContentIndex_InvalidIndex">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Index: The index is out of range..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPane_SetDockState_InvalidState">
+            <summary>
+              Ищет локализованную строку, похожую на The state for the dock pane is invalid..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPaneCaption_ToolTipAutoHide">
+            <summary>
+              Ищет локализованную строку, похожую на Auto Hide.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPaneCaption_ToolTipClose">
+            <summary>
+              Ищет локализованную строку, похожую на Close.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPaneCaption_ToolTipOptions">
+            <summary>
+              Ищет локализованную строку, похожую на Options.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ActiveAutoHideContent_InvalidValue">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Content: The content must be auto-hide state and associates with this DockPanel..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ActiveAutoHideContentChanged_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when the value of the AutoHideWindow&apos;s ActiveContent changed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ActiveContentChanged_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when the value of ActiveContentProperty changed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ActiveDocumentChanged_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when the value of ActiveDocument property changed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ActivePaneChanged_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when the value of ActivePane property changed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_AllowEndUserDocking_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Determines if the drag and drop docking is allowed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_AllowEndUserNestedDocking_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Determines if the drag and drop nested docking is allowed..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ContentAdded_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when a content added to the DockPanel..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ContentRemoved_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Occurs when a content removed from the DockPanel..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DefaultFloatWindowSize_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The default size of float window..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Provides Visual Studio .Net style docking..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DockBottomPortion_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Size of the bottom docking window. Value &lt; 1 to specify the size in portion; value &gt; 1 to specify the size in pixels..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DockLeftPortion_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Size of the left docking window. Value &lt; 1 to specify the size in portion; value &gt; 1 to specify the size in pixels..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DockPanelSkin">
+            <summary>
+              Ищет локализованную строку, похожую на The visual skin to use when displaying the docked windows..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DockRightPortion_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Size of the right docking window. Value &lt; 1 to specify the size in portion; value &gt; 1 to specify the size in pixels..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DockTopPortion_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Size of the top docking window. Value &lt; 1 to specify the size in portion; value &gt; 1 to specify the size in pixels..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DocumentStyle_Description">
+            <summary>
+              Ищет локализованную строку, похожую на The style of the document window..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_DocumentTabStripLocation">
+            <summary>
+              Ищет локализованную строку, похожую на Determines where the tab strip for Document style content is drawn..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_LoadFromXml_AlreadyInitialized">
+            <summary>
+              Ищет локализованную строку, похожую на The DockPanel has already been initialized..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_LoadFromXml_InvalidFormatVersion">
+            <summary>
+              Ищет локализованную строку, похожую на The configuration file&apos;s version is invalid..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_LoadFromXml_InvalidXmlFormat">
+            <summary>
+              Ищет локализованную строку, похожую на The XML file format is invalid..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ParentForm_Invalid">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid parent form. When using DockingMdi or SystemMdi document style, the DockPanel control must be the child control of the main MDI container form..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_Persistor_XmlFileComment1">
+            <summary>
+              Ищет локализованную строку, похожую на DockPanel configuration file. Author: Weifen Luo, all rights reserved..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_Persistor_XmlFileComment2">
+            <summary>
+              Ищет локализованную строку, похожую на !!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_RightToLeftLayout_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Indicates whether the control layout is right-to-left when the RightToLeft property is set to Yes..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_SetPaneIndex_InvalidIndex">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Index: The index is out of range..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_SetPaneIndex_InvalidPane">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Pane: DockPane not within the collection..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ShowAutoHideContentOnHover_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Shows the hidden autohide content when hovering over the tab.  When disabled, the tab must be clicked to show the content..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ShowCloseButtonOnEachTab_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Show close button on each tab.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_ShowDocumentIcon_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Determines if the document icon will be displayed in the tab strip..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPanel_SupportDeeplyNestedContent_Description">
+            <summary>
+              Ищет локализованную строку, похожую на Support deeply nested controls.  Disabling this setting may improve resize performance but may cause heavily nested content not to resize..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPaneStrip_ToolTipClose">
+            <summary>
+              Ищет локализованную строку, похожую на Close.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.DockPaneStrip_ToolTipWindowList">
+            <summary>
+              Ищет локализованную строку, похожую на Window List.
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.FloatWindow_Constructor_NullDockPanel">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid argument: DockPanel can not be &quot;null&quot;..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.FloatWindow_SetPaneIndex_InvalidIndex">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Index: The index is out of range..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.FloatWindow_SetPaneIndex_InvalidPane">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid Pane: DockPane not within the collection..
+            </summary>
+        </member>
+        <member name="P:WeifenLuo.WinFormsUI.Docking.Strings.IDockDragSource_DockTo_InvalidPanel">
+            <summary>
+              Ищет локализованную строку, похожую на Invalid DockPanel..
+            </summary>
+        </member>
+    </members>
+</doc>
