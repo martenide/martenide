@@ -34,11 +34,13 @@
             // 
             // tree
             // 
+            this.tree.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tree.AutoScroll = true;
-            this.tree.AutoScrollMinSize = new System.Drawing.Size(0, 59);
+            this.tree.AutoScrollMargin = new System.Drawing.Size(5, 5);
+            this.tree.AutoScrollMinSize = new System.Drawing.Size(20, 59);
             this.tree.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tree.BackColor = System.Drawing.SystemColors.Window;
-            this.tree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tree.ImageCheckBoxOff = ((System.Drawing.Image)(resources.GetObject("tree.ImageCheckBoxOff")));
             this.tree.ImageCheckBoxOn = ((System.Drawing.Image)(resources.GetObject("tree.ImageCheckBoxOn")));
             this.tree.ImageCollapse = ((System.Drawing.Image)(resources.GetObject("tree.ImageCollapse")));
@@ -46,17 +48,19 @@
             this.tree.ImageExpand = ((System.Drawing.Image)(resources.GetObject("tree.ImageExpand")));
             this.tree.IsEditMode = false;
             this.tree.Location = new System.Drawing.Point(0, 0);
+            this.tree.MinimumSize = new System.Drawing.Size(30, 30);
             this.tree.Name = "tree";
             this.tree.ShowExpandBoxes = true;
             this.tree.ShowIcons = true;
-            this.tree.Size = new System.Drawing.Size(284, 261);
+            this.tree.Size = new System.Drawing.Size(124, 553);
             this.tree.TabIndex = 0;
             // 
             // SolutionWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(124, 554);
             this.Controls.Add(this.tree);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "SolutionWindow";
@@ -68,6 +72,7 @@
         #endregion
 
         internal FastTreeNS.FastTree tree;
+
 
     }
 }

@@ -15,16 +15,17 @@ namespace marten
         /// <summary>
         /// For loading dock settings
         /// </summary>
-        private DeserializeDockContent deserializeDockContent;
+        private readonly DeserializeDockContent deserializeDockContent;
 
+        
 
         void SaveLayout()
         {
             try
             {
-                if (!Directory.Exists(GetConfigDir()))
-                    Directory.CreateDirectory(GetConfigDir());
-                dockPanel.SaveAsXml(Path.Combine(GetConfigDir(), @"layoutDockPanel.xml"));
+                if (!Directory.Exists(App.configDir))
+                    Directory.CreateDirectory(App.configDir);
+                dockPanel.SaveAsXml(Path.Combine(App.configDir, @"layoutDockPanel.xml"));
             }
             catch (Exception e)
             {
@@ -34,16 +35,7 @@ namespace marten
             }
         }
 
-        string GetSolutionDir()
-        {
-            // ToDo: implement this
-            return @"e:\marten\test";
-        }
 
-        string GetConfigDir()
-        {
-            return Path.Combine(GetSolutionDir(), @".marten");
-        }
 
 
         private bool LoadLayout(string configDir)
@@ -52,14 +44,14 @@ namespace marten
             try
             {
                 dockPanel.SuspendLayout(true);
-                string configPath = Path.Combine(configDir, @"layoutDockPanel.xml");
-                if (!Directory.Exists(GetConfigDir()) || !File.Exists(configPath))
+                string configFile = Path.Combine(configDir, @"layoutDockPanel.xml");
+                if (!Directory.Exists(configDir) || !File.Exists(configFile))
                 {
                     result = false;
                 }
                 else
                 {
-                    dockPanel.LoadFromXml(configPath, deserializeDockContent);
+                    dockPanel.LoadFromXml(configFile, deserializeDockContent);
                     result = true;
                 }
             }
@@ -80,10 +72,12 @@ namespace marten
         {
             if (persistString == typeof(SolutionWindow).ToString())
                 return solutionWindow;
+            if (persistString == typeof(OutputWindow).ToString())
+                return outputWindow;
             else
             {
                 // EditorWindow overrides GetPersistString to add extra information into persistString.
-                string[] parsedStrings = persistString.Split(new string[] { App.PersistentStringSeparator },StringSplitOptions.None);
+                string[] parsedStrings = persistString.Split(new[] { App.PersistentStringSeparator },StringSplitOptions.None);
                 if (parsedStrings.Length != 2)
                     return null;
 
