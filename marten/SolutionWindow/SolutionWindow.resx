@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tree.ImageCheckBoxOff" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileTree.ImageCheckBoxOff" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAF9JREFUOE/F
         zMEGADEMhOE+eh83SlSIilC71vY4hwnLDt8l5G+frPd+VZ3Xd8+hMhjYe9NgIDNpMBARNBhYa9FgwN1p
         MGBmNBiYc9JgQFVpMDDGoMGAiNBgoOq8/r7WbgJMSc0Ux2e4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tree.ImageCheckBoxOn" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileTree.ImageCheckBoxOn" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE/F
         jAEHBSEQhPvp/dxEEkki92y7e+bY9xTHGz5qZmfcK/LeX6dIlUXGicyBOec25sAY4yd4Yw703r9COd6Y
@@ -133,7 +133,7 @@
         5sApUv27nPsAN2AtbrOGiaYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="tree.ImageCollapse" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileTree.ImageCollapse" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAA3klEQVQ4T6XQ
@@ -143,7 +143,7 @@
         8xzc230SIYoi9Xlpzdd20NzbfRLhG87hE87hE87h/+H1Bj3s+7/btXshAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tree.ImageDefaultIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileTree.ImageDefaultIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAX5JREFUOE+N0cFOwkAQAFCOnCEx4SBEbCJw9cJFoIWk/oj/4DdwMX6BF/Uz1A9Q
@@ -155,7 +155,7 @@
         qYp9Kg5U8c4wKQzDmGZ1W6DRaBzW6/XLWq32Z9IdzANVB5UfQBsYBok6XRYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="tree.ImageExpand" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileTree.ImageExpand" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAA5ElEQVQ4T6WQ

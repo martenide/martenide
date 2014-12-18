@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,6 @@ namespace marten
 {
     public partial class SolutionWindow : DockContent
     {
-        private int cachedNeedWidth = 0;
-        private int minCachedNeedWidth = 0;
         public SolutionWindow()
         {
             InitializeComponent();
@@ -26,34 +25,29 @@ namespace marten
                 Close();
                 return;
             }
-            tree.Build(new FileNode(App.solutionPath, true).ToList());
-            tree.PaintNode += tree_PaintNode;
-            tree.NodeExpandedStateChanged += tree_NodeExpandedStateChanged;
-            tree.Width = this.Width;
-            minCachedNeedWidth = Int32.MaxValue;
+            fileTree.Build(new FileNode(App.solutionPath, true).ToList());
+            Width = 150;
+            fileTree.Width = this.Width;
         }
 
-        void tree_NodeExpandedStateChanged(object sender, NodeExpandedStateChangedEventArgs e)
+        private void fileTree_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (minCachedNeedWidth < tree.Width)
-            {
-                tree.Width = minCachedNeedWidth;
-            }
+            if (fileTree.Nodes == null || !fileTree.Nodes.Any() || !fileTree.SelectedItemIndex.Any())
+                return;
+            FileNode node = fileTree.Nodes.ElementAt(fileTree.SelectedItemIndex.First()) as FileNode;
+            if (node == null || node.isDir 
+                || MainForm.instance == null || MainForm.instance.dockPanel == null
+                || MainForm.instance.editorWindows == null )
+                return;
+            var newEditor = new EditorWindow { filepath = node.path, Text = node.name};
+            newEditor.Show(MainForm.instance.dockPanel);
+            MainForm.instance.editorWindows.Add(newEditor);
+            newEditor.OpenFile();
         }
-        
-        void tree_PaintNode(object sender, FastTreeNS.PaintNodeContentEventArgs e)
-        {
-            cachedNeedWidth = e.Info.X_Text + (int)e.Graphics.MeasureString(e.Info.Text, tree.Font).Width+5;
-            if (minCachedNeedWidth > cachedNeedWidth)
-            {
-                minCachedNeedWidth = cachedNeedWidth;
-            }
-            if (tree.Width < cachedNeedWidth)
-            {
-                tree.Width = cachedNeedWidth;
-            }
-            tree.DrawItemWhole(e.Graphics,e.Info);
-        }
+
+
+
+     
 
         
     }

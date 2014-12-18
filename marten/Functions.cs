@@ -84,8 +84,12 @@ namespace marten
                 if (parsedStrings[0] != typeof(EditorWindow).ToString())
                     return null;
                 var savedEditor = new EditorWindow();
-                if(!String.IsNullOrWhiteSpace(parsedStrings[1]))
+                if (!String.IsNullOrWhiteSpace(parsedStrings[1]))
+                {
                     savedEditor.filepath = parsedStrings[1];
+                    savedEditor.Text = Path.GetFileName(parsedStrings[1]);
+                    savedEditor.OpenFile();
+                }
                 if(editorWindows != null)
                     editorWindows.Add(savedEditor);
                 return savedEditor;
